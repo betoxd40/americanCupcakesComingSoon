@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Lato" rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <section id="web">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 pl-5 mt-5">
+                    <div class="row">
+                        <div class="col-8 text-center">
+                            <img src="img/cupcake.png" alt="" class="img-fluid">
+                            <h1 class="display-4">¡Venimos pronto!</h1>
+                            <p>
+                                Estaremos por aquí pronto, mientras tanto nos puedes contactar o visitar nuestra pastelería.
+                            </p>
+                        </div>
+                        <div class="col-8 text-center">
+                            <form method="post" id="mensajeform">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo...">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Mensaje..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary px-5">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="direccion">
+                                Calle Maestro Jose Serrano 7, 46005
+                                <br> Valencia
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 text-right pt-3 pl-5">
+                    <img src="img/logotipo.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  footer">
+            <div class="row ">
+                <div class="col-6 pt-5">
+                    <p class="direccion">
+                        &copy; American Cupcakes 2012, Hecho por
+                        <a href="http://smart4youdesign.com/">Smart4U</a>
+                    </p>
+                </div>
+                <div class="col-6 text-right pr-5">
+                    <a href="https://www.instagram.com/americancupcakes_es/" target="_blank">
+                        <img src="img/instagram-logo.svg" alt="" class="svg">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="tablet" class="container-fluid">
+        <div class="row">
+            <div class="col-12 banner-tablet">
+                <div class="row">
+                    <div class="col-12 text-center pt-5">
+                        <img src="img/logotipo.png" alt="" class="img-fluid">
+                        <h1 class="display-4">¡Venimos pronto!</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 info-tablet text-center pt-5">
+                <p>
+                    Estaremos por aquí pronto, mientras tanto nos puedes contactar o visitar nuestra pastelería.
+                </p>
+                <form class="pt-4" method="post" id="mensajeform">
+                    <div class="form-group row d-flex justify-content-center">
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo...">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-center">
+                        <div class="col-sm-6">
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Mensaje..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-center">
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary px-5">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="direccion">
+                    Calle Maestro Jose Serrano 7, 46005
+                    <br> Valencia
+                </p>
+                <a href="https://www.instagram.com/americancupcakes_es/" target="_blank" class="py-2">
+                    <img src="img/instagram-logo.svg" alt="" class="svg">
+                </a>
+                <p class="direccion pt-4">
+                    &copy; American Cupcakes 2012, Hecho por
+                    <a href="http://smart4youdesign.com/">Smart4U</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $(function () {
+        $("#envio").hide();
+
+        $("#mensajeform").validate({
+            rules: {
+                email: { required: true, email: true },
+                mensaje: { required: true }
+            },
+            messages: {
+                email: "Debe introducir un email válido.",
+                mensaje: "Introducir sus necesidades."
+            },
+            submitHandler: function (form) {
+                var dataString = $('#email').val() + 'mensaje=' + $('#mensaje').val();
+                $.ajax({
+                    type: "POST",
+                    url: "inc/procesa_mensaje.php",
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        $('input').val('');
+                        $('textarea').val('');
+                        swal("¡Mensaje enviado!", "Gracias por contactarse con American Cupcakes. Pronto nos pondremos en contacto con usted a la brevedad posible .", "success");
+
+                    }
+                });
+            }
+        });
+
+    });
+</script>
+
+</html>

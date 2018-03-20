@@ -1,0 +1,31 @@
+<svg id="Group_3" data-name="Group 3" xmlns="http://www.w3.org/2000/svg" viewBox="988 3382 190.788 190.788">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(988 3382)">
+    <circle class="cls-3" cx="95.394" cy="95.394" r="95.394"/>
+    <circle class="cls-4" cx="95.394" cy="95.394" r="90.394"/>
+  </g>
+  <g id="instagram-logo" transform="translate(1039.094 3431.464)">
+    <path id="Path_6" data-name="Path 6" class="cls-2" d="M66.534,0H25.359A25.388,25.388,0,0,0,0,25.36V66.535a25.388,25.388,0,0,0,25.359,25.36H66.534a25.389,25.389,0,0,0,25.36-25.36V25.36A25.388,25.388,0,0,0,66.534,0ZM83.742,66.535A17.226,17.226,0,0,1,66.535,83.741H25.359A17.225,17.225,0,0,1,8.153,66.535V25.36A17.226,17.226,0,0,1,25.359,8.153H66.534A17.226,17.226,0,0,1,83.741,25.36V66.535Z"/>
+    <path id="Path_7" data-name="Path 7" class="cls-2" d="M64.647,40.97A23.678,23.678,0,1,0,88.326,64.649,23.706,23.706,0,0,0,64.647,40.97Zm0,39.2A15.525,15.525,0,1,1,80.172,64.648,15.543,15.543,0,0,1,64.647,80.173Z" transform="translate(-18.7 -18.701)"/>
+    <path id="Path_8" data-name="Path 8" class="cls-2" d="M124.9,28.251A5.976,5.976,0,1,0,129.129,30,6,6,0,0,0,124.9,28.251Z" transform="translate(-54.281 -12.895)"/>
+  </g>
+</svg>

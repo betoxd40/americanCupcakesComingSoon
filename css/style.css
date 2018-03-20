@@ -1,0 +1,98 @@
+#web{
+  background: url("../img/background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Just Another Hand", cursive;
+  color: white;
+}
+
+p {
+  color: white;
+  font-family: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+.form-control {
+  background: transparent;
+  border: white 1px solid;
+}
+
+.btn-primary {
+  background: #9dd4d9;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  border: #9dd4d9;
+}
+
+.btn-primary:hover {
+  background: #c3eef2;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  border: #c3eef2;
+}
+
+.direccion {
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #9dd4d9;
+}
+
+.footer a:hover {
+  color: #c3eef2;
+}
+
+.svg {
+  height: 50px;
+  width: 50px;
+}
+
+.svg:hover {
+  fill: #c3eef2;
+}
+
+#tablet{
+    display: none;
+}
+.banner-tablet{
+    background: url("../img/background-tablet.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+}
+
+.info-tablet{
+    background: #400202;
+    color: white;
+}
+
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+    #web{
+        display: none;
+    }
+    #tablet{
+        display: inline;
+        padding: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+}
